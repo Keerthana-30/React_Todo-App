@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  border: 2px solid black;
 }
 
 .App-logo {
@@ -7,32 +8,74 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display:inline-block;
+  width:600px;
+  background-color: #000000;
+  margin:50px;
+  padding:10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.addtask,.displaytask,.tabTask{
+  display:flex;
+  align-items: center;  
+  justify-content: center;
+  margin:auto;
+  border:2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addtask Input{
+  width: 500px;
+  padding:10px;
+  margin:10px;
+  
+}
+
+button{
+  width:70px;
+  padding:10px;
+  margin: 10px;
+  background-color: black;
+  border-radius: 5px;
+  color:white
+}
+
+ul{
+  list-style: none;
+  padding:0px;
+  width: 620px;
+}
+
+.list-item{
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 30px auto 90px;
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+
+.tabs{
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+}
+.tabs li{
+  cursor: pointer;
+  padding:10px;
+  margin:10px;
+  border-radius: 5px;
+  /* border: 2px solid black; */
+}
+
+.tabs li:hover{
+  background: rgba(15, 246, 215, 0.15);
+}
+
+.tabs li.active{
+  background: #39A2DB;
+  
 }
